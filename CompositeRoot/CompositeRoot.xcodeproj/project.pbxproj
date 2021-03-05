@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		A2CFB70E25F2333D00551025 /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70B25F2333D00551025 /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2CFB70F25F2333D00551025 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70C25F2333D00551025 /* Home.framework */; };
 		A2CFB71025F2333D00551025 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70C25F2333D00551025 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2CFB74325F23BCD00551025 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB74225F23BCD00551025 /* DependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		A2CFB70325F2333500551025 /* CompositeRooting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeRooting.swift; sourceTree = "<group>"; };
 		A2CFB70B25F2333D00551025 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFB70C25F2333D00551025 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2CFB74225F23BCD00551025 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		B30493C7843186CCB3612F63 /* Pods-CompositeRoot-CompositeRootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositeRoot-CompositeRootUITests.release.xcconfig"; path = "Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED6CFCF59295CFC6A0E02B2F /* Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig"; path = "Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,14 +155,15 @@
 		A2CFB64525F22F5800551025 /* CompositeRoot */ = {
 			isa = PBXGroup;
 			children = (
-				A2CFB70125F2330600551025 /* Rooting */,
+				A2CFB65425F22F5900551025 /* Info.plist */,
 				A2CFB64625F22F5800551025 /* AppDelegate.swift */,
+				A2CFB74225F23BCD00551025 /* DependencyContainer.swift */,
 				A2CFB64825F22F5800551025 /* SceneDelegate.swift */,
 				A2CFB64A25F22F5800551025 /* ViewController.swift */,
-				A2CFB64C25F22F5800551025 /* Main.storyboard */,
 				A2CFB64F25F22F5900551025 /* Assets.xcassets */,
 				A2CFB65125F22F5900551025 /* LaunchScreen.storyboard */,
-				A2CFB65425F22F5900551025 /* Info.plist */,
+				A2CFB64C25F22F5800551025 /* Main.storyboard */,
+				A2CFB70125F2330600551025 /* Rooting */,
 			);
 			path = CompositeRoot;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				A2CFB64025F22F5800551025 /* Frameworks */,
 				A2CFB64125F22F5800551025 /* Resources */,
 				A2CFB71125F2333E00551025 /* Embed Frameworks */,
+				4A74AF4A68AE7F80F34C312E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +258,7 @@
 				A2CFB66025F22F5A00551025 /* Sources */,
 				A2CFB66125F22F5A00551025 /* Frameworks */,
 				A2CFB66225F22F5A00551025 /* Resources */,
+				05A9C9C561C7BDC2602D1E8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +362,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		05A9C9C561C7BDC2602D1E8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2DB71942EFD22BAA8E2003ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +399,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A74AF4A68AE7F80F34C312E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot/Pods-CompositeRoot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot/Pods-CompositeRoot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CompositeRoot/Pods-CompositeRoot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF277A8978054192537D4099 /* [CP] Check Pods Manifest.lock */ = {
@@ -408,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2CFB74325F23BCD00551025 /* DependencyContainer.swift in Sources */,
 				A2CFB64B25F22F5800551025 /* ViewController.swift in Sources */,
 				A2CFB64725F22F5800551025 /* AppDelegate.swift in Sources */,
 				A2CFB70425F2333500551025 /* CompositeRooting.swift in Sources */,
@@ -626,7 +666,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A410BC2D73CE268610146A7 /* Pods-CompositeRootTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK67DH72N8;
@@ -649,7 +688,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 903FDE22DA8BFF0080A1326A /* Pods-CompositeRootTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK67DH72N8;
@@ -672,7 +710,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED6CFCF59295CFC6A0E02B2F /* Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK67DH72N8;
 				INFOPLIST_FILE = CompositeRootUITests/Info.plist;
@@ -693,7 +730,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B30493C7843186CCB3612F63 /* Pods-CompositeRoot-CompositeRootUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AK67DH72N8;
 				INFOPLIST_FILE = CompositeRootUITests/Info.plist;

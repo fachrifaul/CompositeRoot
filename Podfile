@@ -5,6 +5,7 @@ workspace 'CompositeRoot'
 
 target 'CompositeRoot' do
   project 'CompositeRoot/CompositeRoot.xcodeproj'
+  pod 'Swinject', '2.7.1'
 
   target 'CompositeRootTests' do
     inherit! :search_paths

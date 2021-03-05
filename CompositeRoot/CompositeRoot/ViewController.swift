@@ -7,6 +7,8 @@
 
 import Account
 import Home
+
+import Swinject
 import UIKit
 
 class ViewController: UIViewController {
@@ -14,10 +16,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let homeManager: HomeManager = HomeManager(accountContent: AccountContainer())
-        print(homeManager.presentAccount())
+        let container = DependencyContainer.instance.container
+        let accountManager: AccountManager = AccountManager(homeContent: container.autoresolve())
+        let homeManager: HomeManager = HomeManager(accountContent: container.autoresolve())
         
-        let accountManager: AccountManager = AccountManager(homeContent: HomeContainer())
+//        let accountManager: AccountManager = AccountManager(homeContent: HomeContainer())
+//        let homeManager: HomeManager = HomeManager(accountContent: AccountContainer())
+        
+        print(homeManager.presentAccount())
         print(accountManager.presentHome())
         
     }
