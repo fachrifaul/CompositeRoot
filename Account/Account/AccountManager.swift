@@ -5,12 +5,12 @@
 //  Created by Fachri Febrian on 05/03/2021.
 //
 
-import Foundation
+import Core
 
 public class AccountManager {
     public var homeContent: HomeCompositeContent
     
-    public init(homeContent: HomeCompositeContent) {
+    public init(homeContent: HomeCompositeContent = DependencyContainer.instance.container.autoresolve()) {
         self.homeContent = homeContent
     }
     

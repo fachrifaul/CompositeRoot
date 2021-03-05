@@ -7,7 +7,7 @@
 
 import Swinject
 
-class DependencyContainer {
+public class DependencyContainer {
     public static var instance: DependencyContainer = DependencyContainer()
 
     public let assembler: Assembler
@@ -22,7 +22,7 @@ class DependencyContainer {
 }
 
 
-extension Resolver {
+public extension Resolver {
     /// Return non-optional dependency, if the dependencies not exist, it will crash.
     func autoresolve<T>(file: StaticString = #file, line: UInt = #line) -> T {
         

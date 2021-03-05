@@ -20,10 +20,9 @@
 		A2CFB66925F22F5A00551025 /* CompositeRootUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB66825F22F5A00551025 /* CompositeRootUITests.swift */; };
 		A2CFB70425F2333500551025 /* CompositeRooting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB70325F2333500551025 /* CompositeRooting.swift */; };
 		A2CFB70D25F2333D00551025 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70B25F2333D00551025 /* Account.framework */; };
-		A2CFB70E25F2333D00551025 /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70B25F2333D00551025 /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A2CFB70F25F2333D00551025 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70C25F2333D00551025 /* Home.framework */; };
-		A2CFB71025F2333D00551025 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB70C25F2333D00551025 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A2CFB74325F23BCD00551025 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB74225F23BCD00551025 /* DependencyContainer.swift */; };
+		A2CFB7AB25F2447F00551025 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB7A825F2447700551025 /* Core.framework */; };
+		A2CFB7AC25F2447F00551025 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB7A825F2447700551025 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A2CFB70E25F2333D00551025 /* Account.framework in Embed Frameworks */,
-				A2CFB71025F2333D00551025 /* Home.framework in Embed Frameworks */,
+				A2CFB7AC25F2447F00551025 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +81,7 @@
 		A2CFB70325F2333500551025 /* CompositeRooting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeRooting.swift; sourceTree = "<group>"; };
 		A2CFB70B25F2333D00551025 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CFB70C25F2333D00551025 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2CFB74225F23BCD00551025 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		A2CFB7A825F2447700551025 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30493C7843186CCB3612F63 /* Pods-CompositeRoot-CompositeRootUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositeRoot-CompositeRootUITests.release.xcconfig"; path = "Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED6CFCF59295CFC6A0E02B2F /* Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig"; path = "Target Support Files/Pods-CompositeRoot-CompositeRootUITests/Pods-CompositeRoot-CompositeRootUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +94,7 @@
 				A2CFB70D25F2333D00551025 /* Account.framework in Frameworks */,
 				254EBC48415A570DA5FE9FB1 /* Pods_CompositeRoot.framework in Frameworks */,
 				A2CFB70F25F2333D00551025 /* Home.framework in Frameworks */,
+				A2CFB7AB25F2447F00551025 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +120,7 @@
 		6177F4017C018EFDBE71A38C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2CFB7A825F2447700551025 /* Core.framework */,
 				A2CFB70B25F2333D00551025 /* Account.framework */,
 				A2CFB70C25F2333D00551025 /* Home.framework */,
 				9F4CEFD9C2774381F9A6CB8F /* Pods_CompositeRoot.framework */,
@@ -157,7 +157,6 @@
 			children = (
 				A2CFB65425F22F5900551025 /* Info.plist */,
 				A2CFB64625F22F5800551025 /* AppDelegate.swift */,
-				A2CFB74225F23BCD00551025 /* DependencyContainer.swift */,
 				A2CFB64825F22F5800551025 /* SceneDelegate.swift */,
 				A2CFB64A25F22F5800551025 /* ViewController.swift */,
 				A2CFB64F25F22F5900551025 /* Assets.xcassets */,
@@ -447,7 +446,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2CFB74325F23BCD00551025 /* DependencyContainer.swift in Sources */,
 				A2CFB64B25F22F5800551025 /* ViewController.swift in Sources */,
 				A2CFB64725F22F5800551025 /* AppDelegate.swift in Sources */,
 				A2CFB70425F2333500551025 /* CompositeRooting.swift in Sources */,

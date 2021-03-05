@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Core
 import Account
 import Home
 import Swinject

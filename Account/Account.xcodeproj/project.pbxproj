@@ -15,6 +15,7 @@
 		A2CFB6E325F2317B00551025 /* HomeCompositeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB6E225F2317B00551025 /* HomeCompositeContent.swift */; };
 		A2CFB6F025F231E000551025 /* AccountContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB6EF25F231E000551025 /* AccountContainer.swift */; };
 		A2CFB71B25F237F800551025 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CFB71A25F237F800551025 /* AccountManager.swift */; };
+		A2CFB7B425F2449800551025 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CFB7B325F2449800551025 /* Core.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A2CFB6E225F2317B00551025 /* HomeCompositeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCompositeContent.swift; sourceTree = "<group>"; };
 		A2CFB6EF25F231E000551025 /* AccountContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountContainer.swift; sourceTree = "<group>"; };
 		A2CFB71A25F237F800551025 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		A2CFB7B325F2449800551025 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C098D4B5182A026A837D8DFE /* Pods-Account.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Account.release.xcconfig"; path = "Target Support Files/Pods-Account/Pods-Account.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31127E7A3D7C1AC7560C1643 /* Pods_Account.framework in Frameworks */,
+				A2CFB7B425F2449800551025 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 		49D8138C526A0AC22CBC275F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2CFB7B325F2449800551025 /* Core.framework */,
 				5DE79AD89D73918FAEE8EDC6 /* Pods_Account.framework */,
 				2A11A9AA485E7346E2045354 /* Pods_AccountTests.framework */,
 			);
@@ -460,6 +464,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bukalapak.ios.Account;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -488,6 +493,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bukalapak.ios.Account;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
